@@ -12,7 +12,7 @@ const initdb = async () =>
     },
   });
 
-export const putDb = async (content) => { console.error('putDb not implemented'); // export function that we use to POST to database.
+export const putDb = async (content) => { console.log('putDb implemented'); // export function that we use to POST to database.
 
 const jateDb = await openDB('jate', 1);  // create a connection to the database.
 
@@ -20,11 +20,11 @@ const tx = jateDb.transaction('jate', 'readwrite'); //create a new transaction a
 
 const store = tx.objectStore('jate'); // open up the desired onject store.
 
-const request = store.add({content: content}); // using .add() method to store.
+const request = store.put({id: 1, value: content}); // using .add() method to store.
 
 const result = await request; //get confirmation of request.
 
-console.log('Data changed!', result); //console log result.
+console.log('Data changed!', result.value); //console log result.
 
 };
 
@@ -36,12 +36,12 @@ const tx = jateDb.transaction('jate', 'readonly');
 
 const store = tx.objectStore('jate');
 
-const request = store.getAll();
+const request = store.get(1);
 
 const result = await request;
 
 console.log('result.value', result);
-return result;
+return result?.value;
 
 };
 
