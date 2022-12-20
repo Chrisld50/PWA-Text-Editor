@@ -25,8 +25,8 @@ SO THAT I can reliably retrieve them for later use
 * Express.js 
 
 # Screenshot 
-![Alt Text](/Screenshots/PWA%20Text%20Editor%20Screenshot%201.png)
-![Alt Text](/Screenshots/PWA%20Text%20Editor%20Screenshot%202.png)
+![Alt Text](/screenshots/PWA%20Text%20Editor%20Screenshot%201.png)
+![Alt Text](/screenshots/PWA%20Text%20Editor%20Screenshot%202.png)
 
 
 # Link 
